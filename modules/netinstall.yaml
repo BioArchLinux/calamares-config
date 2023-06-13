@@ -8,7 +8,7 @@
       description: "Base of System"
       selected: true
       packages:
-        - base
+        - base-bio
         - base-devel
         - linux
     - name: X-System
