@@ -1,0 +1,61 @@
+---
+componentName:  bioarchlinux
+
+
+
+welcomeStyleCalamares:   false
+
+welcomeExpandingLogo:   true
+
+
+windowExpanding:    normal
+
+windowSize: 800px,520px
+
+windowPlacement: center
+
+
+sidebar: widget
+
+navigation: widget
+
+
+
+strings:
+    productName:         bioarchlinux
+    shortProductName:    BioArch
+    version:             rolling
+    shortVersion:        rolling
+    versionedName:       bioarchlinux
+    shortVersionedName:  bioarchlinux
+    bootloaderEntryName: bioarchlinux
+    productUrl:          https://bioarchlinux.org/
+    supportUrl:          https://github.com/BioArchLinux/iso
+    knownIssuesUrl:      https://github.com/BioArchLinux/iso/issues
+    releaseNotesUrl:     https://repo.bioarchlinux.org/iso/
+    donateUrl:           https://bioarchlinux.org
+
+images:
+    productBanner:       "banner.png"
+    productIcon:         "logo.png"
+    productLogo:         "logo.png"
+    # productWallpaper:    "bg.png"
+    # productWelcome:      "welcome.png"
+
+style:
+   sidebarBackground:    "#292F34"
+   sidebarText:          "#FFFFFF"
+   sidebarTextSelect:    "#292F34"
+   sidebarTextHighlight: "#009CCA"
+
+
+slideshow:               "show.qml"
+
+slideshowAPI: 2
+
+
+uploadServer :
+    type :    "fiche"
+    url :     "http://termbin.com:9999"
+    sizeLimit : -1
+

@@ -1,0 +1,383 @@
+- name: "Basic Packages"
+  description: "Recommended. Don't change unless you know what you're doing (generic)."
+  hidden: false
+  selected: true
+  critical: true
+  subgroups:
+    - name: "Base"
+      description: "Base of System"
+      selected: true
+      packages:
+        - base
+        - base-devel
+        - linux
+    - name: X-System
+      description: "X-System and xwayland package"
+      selected: true
+      packages:
+        - xorg-server
+        - xorg-xwayland
+    - name: "GPU drivers"
+      description: "Graphics hardware drivers"
+      selected: true
+      packages:
+        - xf86-video-amdgpu
+        - xf86-video-intel
+        - xf86-video-ati
+    - name: Network
+      description: "Network apps"
+      selected: true
+      packages:
+        - networkmanager
+        - polkit
+    - name: Bluetooth
+      description: "Bluetooth apps"
+      selected: true
+      packages:
+        - bluez
+        - bluez-utils
+    - name: Audio
+      description: "Audio handling tools apps and libs"
+      selected: true
+      packages:
+        - pipewire
+        - pulseaudio
+    - name: Power
+      description: "Powermanagement support"
+      selected: true
+      packages:
+        - upower
+    - name: "CPU specific Microcode update packages"
+      description: "Microcode update image for AMD and Intel CPU"
+      hidden: false
+      selected: false
+      critical: false
+      packages:
+        - amd-ucode
+        - intel-ucode
+    - name: "Package Management"
+      description: "Packages tools"
+      selected: true
+      packages:
+        - pacman-contrib
+        - yay
+    - name: Fonts
+      description: "BioArchLinux recommended font selection"
+      selected: true
+      packages:
+        - adobe-source-han-sans-cn-fonts
+        - adobe-source-han-sans-jp-fonts
+        - adobe-source-han-sans-kr-fonts
+        - cantarell-fonts
+        - freetype2
+        - noto-fonts
+        - ttf-dejavu
+        - ttf-liberation
+        - ttf-nerd-fonts-symbols
+    - name: "Terminal Text Editor"
+      description: "Better to choose one of them for editing file"
+      selected: false
+      packages:
+        - vim
+        - nano
+        - emacs
+        - neovim
+    - name: "Dev and system tools"
+      description: "General tools for dev and system"
+      selected: true
+      packages:
+        - git
+        - rsync
+        - fastfetch
+        - ncdu
+        - openssh
+        - wget
+        - zsh
+- name: "Desktop Basic Packages"
+  description: "Recommended. Select What you want (generic)."
+  hidden: false
+  selected: true
+  critical: true
+  subgroups:
+    - name: "Browser"
+      description: "Better to choose one browser for GUI users"
+      hidden: false
+      selected: false
+      critical: false
+      packages:
+        - firefox
+        - firefox-i18n-$LOCALE
+        - chromium
+        - vivaldi
+    - name: "Terminal emulator"
+      description: "Better to choose one terminal for GUI users"
+      hidden: false
+      selected: false
+      critical: true
+      packages:
+        - tilix
+        - xfce4-terminal
+        - konsole
+        - gnome-console
+        - gnome-terminal
+        - mate-terminal
+        - lxterminal
+        - qterminal
+        - lxterminal
+        - terminator
+        - kitty
+        - foot
+        - alacritty
+    - name: Printing-Support
+      description: "Support for printing (Cups)"
+      hidden: false
+      selected: true
+      critical: false
+      packages:
+        - cups
+        - cups-pdf
+    - name: "Accessibility Tools"
+      description: "Impaired vision tools (Screen reader e.t.c.)"
+      hidden: false
+      selected: false
+      critical: false
+      packages:
+        - espeak-ng
+        - mousetweaks
+        - orca
+- name: XFCE4-Desktop
+  description: "XFCE4 - lightweight desktop fast and low on system resources, visually appealing and user friendly."
+  hidden: false
+  selected: false
+  expanded: false
+  critical: true
+  subgroups:
+    - name: "BioArchLinux settings"
+      description: "Unselect to install vanilla."
+      selected: false
+      packages:
+        - vim-gruvbox
+        - graphite-gtk-theme
+        - graphite-kde-theme
+        - kvantum
+        - tela-icon-theme
+  packages:
+    - xfwm4
+    - xfdesktop
+    - xfce4-setting
+    - xfce4-session
+    - xfce4-panel
+    - xfce4-power-manager
+    - xfce4-appfinder
+    - lightdm
+    - lightdm-gtk-greeter
+- name: i3-Window-Manager
+  description: "i3 tiling window manager, primarily targeted at developers and advanced users."
+  hidden: false
+  selected: false
+  expanded: false
+  critical: true
+  subgroups:
+    - name: "BioArchLinux settings"
+      description: "Unselect to install vanilla."
+      selected: false
+      packages:
+        - vim-gruvbox
+        - graphite-gtk-theme
+        - graphite-kde-theme
+        - kvantum
+        - tela-icon-theme
+  packages:
+    - i3-wm
+    - i3blocks
+    - i3lock
+    - i3status
+    - lightdm
+    - lightdm-gtk-greeter
+- name: Wayfire-Wayland-Compositor 
+  description: "Wayfire wayland compositor, primarily targeted at developers and advanced users."
+  hidden: false
+  selected: false
+  expanded: false
+  critical: true
+  subgroups:
+    - name: "BioArchLinux settings"
+      description: "Unselect to install vanilla."
+      selected: false
+      packages:
+        - vim-gruvbox
+        - vim-wayland-clipboard
+        - graphite-gtk-theme
+        - graphite-kde-theme
+        - kvantum
+        - tela-icon-theme
+        - waybar
+        - blueberry
+        - pavucontrol
+        - htop
+        - light
+        - wofi
+        - swaylock
+        - nwg-launchers
+        - wf-info
+        - wl-clipboard
+  packages:
+    - wayfire
+    - wf-shell
+    - wf-config
+- name: KDE-Desktop
+  description: "KDE-Plasma Desktop - Simple by default, powerful when needed."
+  hidden: false
+  selected: false
+  expanded: false
+  critical: true
+  subgroups:
+    - name: "BioArchLinux settings"
+      description: "Unselect to install vanilla."
+      selected: false
+      packages:
+        - vim-gruvbox
+        - graphite-gtk-theme
+        - graphite-kde-theme
+        - kvantum
+        - tela-icon-theme
+  packages:
+    - plasma-meta
+    - dolphin
+    - sddm 
+- name: GNOME-Desktop
+  description: "GNOME Desktop - designed to put you in control and get things done."
+  hidden: false
+  selected: false
+  expanded: false
+  critical: true
+  subgroups:
+    - name: "BioArchLinux settings"
+      description: "Unselect to install vanilla."
+      selected: false
+      packages:
+        - vim-gruvbox
+        - graphite-gtk-theme
+        - graphite-kde-theme
+        - kvantum
+        - tela-icon-theme
+  packages:
+    - mutter
+    - gnome-shell
+    - nautilus
+    - gnome-control-center
+    - gdm
+    - gnome-tweaks
+- name: MATE-Desktop
+  description: "MATE Desktop - the continuation of GNOME 2"
+  hidden: false
+  selected: false
+  expanded: false
+  critical: true
+  subgroups:
+    - name: "BioArchLinux settings"
+      description: "Unselect to install vanilla."
+      selected: false
+      packages:
+        - vim-gruvbox
+        - graphite-gtk-theme
+        - graphite-kde-theme
+        - kvantum
+        - tela-icon-theme
+  packages:
+    - mate
+    - lightdm
+    - lightdm-gtk-greeter
+- name: Cinnamon-Desktop
+  description: "Cinnamon Desktop - advanced innovative features and a traditional user experience."
+  hidden: false
+  selected: false
+  expanded: false
+  critical: true
+  subgroups:
+    - name: "BioArchLinux settings"
+      description: "Unselect to install vanilla."
+      selected: false
+      packages:
+        - vim-gruvbox
+        - graphite-gtk-theme
+        - graphite-kde-theme
+        - kvantum
+        - tela-icon-theme
+  packages:
+    - cinnamon
+    - nemo
+    - lightdm
+    - lightdm-gtk-greeter
+- name: Budgie-Desktop
+  description: "Budgie - an independent, familiar, and modern desktop."
+  hidden: false
+  selected: false
+  expanded: false
+  critical: true
+  subgroups:
+    - name: "BioArchLinux settings"
+      description: "Unselect to install vanilla."
+      selected: false
+      packages:
+        - vim-gruvbox
+        - graphite-gtk-theme
+        - graphite-kde-theme
+        - kvantum
+        - tela-icon-theme
+  packages:
+    - budgie-desktop
+    - budgie-control-center
+    - nemo
+    - lightdm
+    - lightdm-gtk-greeter
+- name: LXQT-Desktop
+  description: "LXQT - The Lightweight Qt Desktop Environment."
+  hidden: false
+  selected: false
+  expanded: false
+  critical: true
+  subgroups:
+    - name: "BioArchLinux settings"
+      description: "Unselect to install vanilla."
+      selected: false
+      packages:
+        - vim-gruvbox
+        - graphite-gtk-theme
+        - graphite-kde-theme
+        - kvantum
+        - tela-icon-theme
+  packages:
+    - openbox
+    - lxqt-admin
+    - lxqt-runner
+    - lxqt-panel
+    - lxqt-config
+    - lxqt-session
+    - pcmanfm-qt 
+    - sddm
+- name: LXDE-Desktop
+  description: "LXDE - The Lightweight Desktop Environment."
+  hidden: false
+  selected: false
+  expanded: false
+  critical: true
+  subgroups:
+    - name: "BioArchLinux settings"
+      description: "Unselect to install vanilla."
+      selected: false
+      packages:
+        - vim-gruvbox
+        - graphite-gtk-theme
+        - graphite-kde-theme
+        - kvantum
+        - tela-icon-theme
+  packages:
+    - openbox
+    - lxappearance
+    - lxlauncher
+    - lxpanel
+    - lxsession
+    - lxde-common
+    - pacmanfm
+    - lxdm
